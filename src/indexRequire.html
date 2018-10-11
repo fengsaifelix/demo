@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script src="js/lib/require.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+        require(["jquery", "common","map1", "student"], function ($, common,map1, stu) {
+
+            stu.say();
+            common.init();
+            console.log(common.getIP());
+            $("#divDom").append("dd");
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="divDom"></div>
+</body>
+
+</html>
