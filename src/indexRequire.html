@@ -9,14 +9,19 @@
     <script src="js/main.js"></script>
     <script>
 
-        require(["jquery", "common","map1", "student"], function ($, common,map1, stu) {
+        require(["jquery", "common", "map1", "student"], function ($, common, map1, stu) {
 
             stu.say();
             common.init();
             console.log(common.getIP());
             $("#divDom").append("dd");
 
+            common.get("config/root.config.json", function (data) {
+                console.log(data);
+            });
+            
         });
+
     </script>
 </head>
 

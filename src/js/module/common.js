@@ -1,5 +1,5 @@
 define(['jquery'], function ($) {
-    const CONST_CONFIG_PATHIP = '';
+    const CONST_CONFIG_PATHIP = 'config/root.config.json';
     const serviceProvider = {};
 
     const IP = '';
@@ -83,6 +83,7 @@ define(['jquery'], function ($) {
         this.get(CONST_CONFIG_PATHIP, function (data) {
             this.IP = data == undefined ? "" : data.IP;
             this.PATH = data == undefined ? "" : data.PATH;
+            console.log(data == undefined ? "" : data.basemap);
         });
     };
 
